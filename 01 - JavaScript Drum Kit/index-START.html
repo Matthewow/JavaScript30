@@ -70,14 +70,10 @@
     audio.currentTime = 0; //rewind to start 
     audio.play();
     key.classList.add('playing');
-    audio.addEventListener('ended', function(){
-      key.classList.remove('playing')
-    })
   }
 
   function removeTransition(e){
-    console.log(e)
-    if(e.propertyName !== 'transform') return; // skip it if it's not a transform'
+    if(e.propertyName !== 'border-left-color') return; // skip it if it's not a transform'
     this.classList.remove('playing');
   }
 
