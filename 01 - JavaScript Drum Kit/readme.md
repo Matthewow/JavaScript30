@@ -63,7 +63,7 @@
 
    A possible solution:
 
-   ```
+    ```
     我也遇到这个问题，但发现原因并不是this.classList或者event.target.classList，而是在过滤事件的代码中
     if (event.propertyName !== 'transform') return;
     这里如果是transform或者box-shadow就会出现长按样式不能恢复的情况；
